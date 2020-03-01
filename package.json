@@ -55,5 +55,8 @@
         "@babel/plugin-proposal-class-properties"
       ]
     ]
-  }
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }
