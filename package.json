@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A client for playing with Ant Party servers (defaults to ant-party.herokuapp.com).",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "start": "node index.js",
     "lint": "eslint . --fix",
