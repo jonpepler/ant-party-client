@@ -2,5 +2,11 @@
 
 const args = require('./util/arg-processor')
 const connectionCheck = require('./util/connection-checker')
+const roomJoiner = require('./util/join-room')
 
-connectionCheck(args.server)
+async function setup () {
+  await connectionCheck(args.server)
+  roomJoiner(args.server)
+}
+
+setup()
