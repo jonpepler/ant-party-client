@@ -1,29 +1,29 @@
 const ora = require('ora')
-const axios = require('axios')
 const readline = require('readline-sync')
-
-const processErrorMessage = errorResponse => {
-  if (errorResponse.response && errorResponse.response.data) {
-    return errorResponse.response.data.error
-  }
-}
+const io = require('socket.io-client')
 
 module.exports = (host) => {
   const gamecode = readline.question('  Gamecode: ')
   const spinner = ora(`Connecting to game ${gamecode}`).start()
-  const url = `${host}/api/v1/game/join/${gamecode}`
-  axios.post(url)
-    .then(response => {
+  const socket = io(host)
+
+  socket.on('joinGame', response => {
+    const { result, error } = response
+    if (result) {
       spinner.succeed(`Joined game ${gamecode}`)
-    })
-    .catch(error => {
-      // console.log(error)
+    } else {
       spinner.fail(`Game join failed:
-      ${error}
-      ${processErrorMessage(error)}
-      `)
-    })
-    .finally(() => {
-      spinner.stop()
-    })
+      ${error.status}: ${error.message}`)
+    }
+    clearTimeout(this.timer)
+    spinner.stop()
+  })
+
+  const timedOut = () => {
+    spinner.fail(`Timed out connecting to ${gamecode}`)
+    process.exit()
+  }
+
+  this.timer = setTimeout(timedOut, 60000)
+  socket.emit('joinGame', { gamecode })
 }

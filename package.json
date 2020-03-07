@@ -26,12 +26,13 @@
   },
   "homepage": "https://github.com/jonpepler/ant-party-client#readme",
   "dependencies": {
-    "eslint-import-resolver-alias": "^1.1.2",
     "axios": "^0.19.2",
     "command-line-args": "^5.1.1",
     "command-line-usage": "^6.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "ora": "^4.0.3",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "socket.io-client": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
