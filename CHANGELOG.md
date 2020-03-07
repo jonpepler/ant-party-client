@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/jonpepler/ant-party-client/compare/v0.0.3...v0.1.1) (2020-03-07)
+
+
+### Features
+
+* 🎸 Join games over sockets instead of http ([a1a75e0](https://github.com/jonpepler/ant-party-client/commit/a1a75e0e5396770c8a855336025974c9e6473c87))
+
 ### [0.0.3](https://github.com/jonpepler/ant-party-client/compare/v0.0.2...v0.0.3) (2020-03-06)
 
 
