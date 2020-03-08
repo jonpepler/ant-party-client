@@ -4,6 +4,7 @@ const io = require('socket.io-client')
 
 module.exports = (host) => {
   const gamecode = readline.question('  Gamecode: ')
+  const playerName = readline.question('  Name: ')
   const spinner = ora(`Connecting to game ${gamecode}`).start()
   const socket = io(host)
 
@@ -25,5 +26,5 @@ module.exports = (host) => {
   }
 
   this.timer = setTimeout(timedOut, 60000)
-  socket.emit('joinGame', { gamecode })
+  socket.emit('joinGame', { gamecode, playerName })
 }
