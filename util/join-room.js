@@ -1,12 +1,10 @@
 const ora = require('ora')
 const readline = require('readline-sync')
-const io = require('socket.io-client')
 
-module.exports = (host) => {
+module.exports = (socket) => {
   const gamecode = readline.question('  Gamecode: ')
   const playerName = readline.question('  Name: ')
   const spinner = ora(`Connecting to game ${gamecode}`).start()
-  const socket = io(host)
 
   socket.on('joinGame', response => {
     const { result, error } = response
