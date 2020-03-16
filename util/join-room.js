@@ -1,7 +1,7 @@
 const ora = require('ora')
 const readline = require('readline-sync')
 
-module.exports = (socket) => {
+module.exports = (socket, startGame) => {
   const gamecode = readline.question('  Gamecode: ')
   const playerName = readline.question('  Name: ')
   const spinner = ora(`Connecting to game ${gamecode}`).start()
@@ -16,6 +16,8 @@ module.exports = (socket) => {
     }
     clearTimeout(this.timer)
     spinner.stop()
+    if (result) startGame(gamecode)
+    if (error) process.exit()
   })
 
   const timedOut = () => {

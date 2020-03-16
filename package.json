@@ -27,37 +27,36 @@
   "homepage": "https://github.com/jonpepler/ant-party-client#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "clear": "^0.1.0",
+    "colors": "^1.4.0",
     "command-line-args": "^5.1.1",
     "command-line-usage": "^6.1.0",
+    "del": "^5.1.0",
+    "diff": "^4.0.2",
     "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "import-jsx": "^3.1.0",
+    "ink": "^2.7.1",
+    "ink-box": "^1.0.0",
+    "ink-spinner": "^3.0.1",
+    "node-cleanup": "^2.1.2",
+    "node-watch": "^0.6.3",
     "ora": "^4.0.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
     "readline-sync": "^1.4.10",
     "socket.io-client": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/register": "^7.6.2",
     "eslint": "^6.8.0",
-    "eslint-plugin-node": "^11.0.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "nodemon": "^2.0.2",
     "pre-commit": "^1.2.2",
     "regenerator-runtime": "^0.13.3"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      [
-        "@babel/plugin-proposal-class-properties"
-      ]
-    ]
   },
   "pre-commit": [
     "lint"

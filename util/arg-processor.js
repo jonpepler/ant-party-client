@@ -33,9 +33,5 @@ if (args.help) {
   process.exit()
 }
 
-const defaults = {
-  server: 'https://ant-party.herokuapp.com'
-}
-
 // Override defaults with any user specified args
-module.exports = { ...defaults, ...args }
+module.exports = args
