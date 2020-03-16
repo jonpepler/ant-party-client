@@ -43,7 +43,6 @@ class Game extends React.Component {
     const { gamecode, config } = this.props
     const { updating, antFileVersion, liveAntFileVersion, error } = this.state
     const { antDirectory, antFileName } = config
-    console.log((updating && liveAntFileVersion > 0))
     return (
       <Box flexDirection="column" height="100%">
         <Box>Ant Party: Game {gamecode}</Box>
