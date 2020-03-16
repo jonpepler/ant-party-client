@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/jonpepler/ant-party-client/compare/v0.1.2...v0.2.0) (2020-03-16)
+
+
+### Features
+
+* 🎸 Collect and send player name when joining ([a639c39](https://github.com/jonpepler/ant-party-client/commit/a639c398d4972603bd070a1c096b2187ac671d67))
+* 🎸 Listen for game start network message and print ([3c913f1](https://github.com/jonpepler/ant-party-client/commit/3c913f1f32736f1cefeb4e661d0bd0fcdb4bb8e0))
+* 🎸 Support antFile updates during a game ([c9e1da8](https://github.com/jonpepler/ant-party-client/commit/c9e1da82c900ab0beae740bfcf3d8ace5c46e265))
+
 ### [0.1.2](https://github.com/jonpepler/ant-party-client/compare/v0.1.1...v0.1.2) (2020-03-07)
 
 ### [0.1.1](https://github.com/jonpepler/ant-party-client/compare/v0.0.3...v0.1.1) (2020-03-07)
