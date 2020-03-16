@@ -1,12 +1,12 @@
 const React = require('react')
 const PropTypes = require('prop-types')
 const { Box, Color, Text } = require('ink')
-const Spinner = require('ink-spinner')
 const importJsx = require('import-jsx')
 
 const fs = require('fs')
 
 const FileWatcher = importJsx('./FileWatcher')
+const Spinner = importJsx('./components/Spinner')
 
 class Game extends React.Component {
   constructor () {
@@ -51,7 +51,10 @@ class Game extends React.Component {
           <FileWatcher config={config} pushUpdate={this.pushUpdate}/>
           <Box>
             {(updating)
-              ? (<Box><Spinner type="dots" />Pushing version {antFileVersion}...</Box>)
+              ? (<Box>
+                <Color cyan><Spinner /></Color>
+                {` Pushing version ${antFileVersion}...`}
+              </Box>)
               : liveAntFileVersion > 0 ? `Latest version on server: ${liveAntFileVersion}` : ''}
           </Box>
         </Box>
