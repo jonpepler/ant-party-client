@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/jonpepler/ant-party-client/compare/v0.3.0...v0.3.1) (2020-03-16)
+
+
+### Bug Fixes
+
+* 🐛 Fix versioning ([254eb12](https://github.com/jonpepler/ant-party-client/commit/254eb12f744c7434383f2546781a17fb8872f92a))
+* 🐛 Remove useless log ([969343d](https://github.com/jonpepler/ant-party-client/commit/969343d88ea5cefda4d5f448cf97f8cd6f3067d8))
+
 ## [0.3.0](https://github.com/jonpepler/ant-party-client/compare/v0.2.0...v0.3.0) (2020-03-16)
 
 ## [0.2.0](https://github.com/jonpepler/ant-party-client/compare/v0.1.2...v0.2.0) (2020-03-16)
