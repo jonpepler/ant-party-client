@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/jonpepler/ant-party-client/compare/v0.3.2...v0.3.3) (2021-01-08)
+
+
+### Features
+
+* 🎸 Report if game is started in terminal ([a4c2c86](https://github.com/jonpepler/ant-party-client/commit/a4c2c86cd3a2ff627d48bbb1cccfc7637a681ea1))
+* 🎸 Update ant.js to start with runable code ([5003c9b](https://github.com/jonpepler/ant-party-client/commit/5003c9ba3fac15428c0f4bd35f438b7aad1750f6))
+* 🎸 Update to socket.io 3 ([ecbf33a](https://github.com/jonpepler/ant-party-client/commit/ecbf33a999a7963179258b0b6eaa63f034ca5b7c))
+
 ### [0.3.2](https://github.com/jonpepler/ant-party-client/compare/v0.3.1...v0.3.2) (2020-03-16)
 
 
