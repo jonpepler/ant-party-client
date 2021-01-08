@@ -12,10 +12,6 @@ const importJsx = require('import-jsx')
 const del = require('del')
 const clear = require('clear')
 
-socket.on('gameStart', () => {
-  console.log('  Game started!')
-})
-
 function startGame (gamecode) {
   clear()
   const Game = importJsx('./game/Game')

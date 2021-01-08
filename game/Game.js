@@ -13,7 +13,9 @@ class Game extends React.Component {
     super()
     this.pushUpdate = this.pushUpdate.bind(this)
     this.setupSocketListeners = this.setupSocketListeners.bind(this)
-    this.state = {}
+    this.state = {
+      gameStarted: false
+    }
   }
 
   componentDidMount () {
@@ -29,6 +31,9 @@ class Game extends React.Component {
           return { updating: false, error: undefined, liveAntFileVersion }
         }
       })
+    })
+    socket.on('gameStart', () => {
+      this.setState({ gameStarted: true })
     })
   }
 
@@ -46,6 +51,8 @@ class Game extends React.Component {
     return (
       <Box flexDirection="column" height="100%">
         <Box>Ant Party: Game {gamecode}</Box>
+        <Box>Socket ID: {this.props.connection.socket.id}</Box>
+        <Box>Game Started: {this.state.gameStarted ? 'Yes' : 'No'}</Box>
 
         <Box padding={1}>
           <FileWatcher config={config} pushUpdate={this.pushUpdate}/>
