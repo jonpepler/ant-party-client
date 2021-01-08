@@ -1,4 +1,12 @@
-module.exports = ant => {
+/*
+  ant is provided by the server.
+*/
+
+(() => {
+  // eslint-disable-next-line no-undef
+  const { senses, health } = ant
   // Your ant code here
-  return { action: null, pheremones: null }
-}
+
+  // return { move: number (0-7), pheromone: [string] }
+  return {}
+})()
