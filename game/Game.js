@@ -7,11 +7,13 @@ const fs = require('fs')
 
 const FileWatcher = importJsx('./FileWatcher')
 const Spinner = importJsx('./components/Spinner')
+const AntRequester = importJsx('./components/AntRequester')
 
 class Game extends React.Component {
   constructor () {
     super()
     this.pushUpdate = this.pushUpdate.bind(this)
+    this.requestAnt = this.requestAnt.bind(this)
     this.setupSocketListeners = this.setupSocketListeners.bind(this)
     this.state = {
       gameStarted: false
@@ -44,6 +46,10 @@ class Game extends React.Component {
     })
   }
 
+  requestAnt () {
+    this.props.connection.socket.emit('antSpawnRequest')
+  }
+
   render () {
     const { gamecode, config } = this.props
     const { updating, antFileVersion, liveAntFileVersion, error } = this.state
@@ -65,6 +71,7 @@ class Game extends React.Component {
                 </Box>)
                 : <Text>{liveAntFileVersion > 0 ? `Latest version on server: ${liveAntFileVersion}` : ''}</Text>}
             </Box>
+            <AntRequester canRequest={true} request={this.requestAnt}></AntRequester>
           </Box>
         </Box>
 
