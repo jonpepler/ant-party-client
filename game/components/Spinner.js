@@ -5,7 +5,7 @@
 
 const React = require('react')
 const PropTypes = require('prop-types')
-const { Box } = require('ink')
+const { Text } = require('ink')
 const spinners = require('cli-spinners')
 
 class Spinner extends React.Component {
@@ -44,9 +44,9 @@ class Spinner extends React.Component {
   render () {
     const spinner = this.getSpinner()
     return (
-      <Box>
+      <Text color="cyan">
         {spinner.frames[this.state.frame]}
-      </Box>
+      </Text>
     )
   }
 }

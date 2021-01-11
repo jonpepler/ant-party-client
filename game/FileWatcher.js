@@ -1,6 +1,6 @@
 const React = require('react')
 const PropTypes = require('prop-types')
-const { Box, Text, Color } = require('ink')
+const { Box, Text } = require('ink')
 const fs = require('fs')
 const watch = require('node-watch')
 const jsdiff = require('diff')
@@ -82,9 +82,9 @@ class FileWatcher extends React.Component {
     return (
       <Box width={20} justifyContent="space-between" flexDirection="column">
         <Text>Ant Version: {antFileVersion}</Text>
-        <Box>
-          <Box><Color green>+{additions}</Color></Box>
-          <Box marginLeft={marginLeft}><Color red>-{removals}</Color></Box>
+        <Box justifyContent="space-around">
+          <Text color="green">+{additions}</Text>
+          <Text marginLeft={marginLeft} color="red">-{removals}</Text>
         </Box>
       </Box>
     )

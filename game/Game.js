@@ -1,6 +1,6 @@
 const React = require('react')
 const PropTypes = require('prop-types')
-const { Box, Color, Text } = require('ink')
+const { Box, Text } = require('ink')
 const importJsx = require('import-jsx')
 
 const fs = require('fs')
@@ -50,25 +50,27 @@ class Game extends React.Component {
     const { antDirectory, antFileName } = config
     return (
       <Box flexDirection="column" height="100%">
-        <Box>Ant Party: Game {gamecode}</Box>
-        <Box>Socket ID: {this.props.connection.socket.id}</Box>
-        <Box>Game Started: {this.state.gameStarted ? 'Yes' : 'No'}</Box>
+        <Text>Ant Party: Game {gamecode}</Text>
+        <Text>Socket ID: {this.props.connection.socket.id}</Text>
+        <Text>Game Started: {this.state.gameStarted ? 'Yes' : 'No'}</Text>
 
-        <Box padding={1}>
-          <FileWatcher config={config} pushUpdate={this.pushUpdate}/>
-          <Box>
-            {(updating)
-              ? (<Box>
-                <Color cyan><Spinner /></Color>
-                {` Pushing version ${antFileVersion}...`}
-              </Box>)
-              : liveAntFileVersion > 0 ? `Latest version on server: ${liveAntFileVersion}` : ''}
+        <Box>
+          <Box padding={1}>
+            <FileWatcher config={config} pushUpdate={this.pushUpdate}/>
+            <Box>
+              {(updating)
+                ? (<Box>
+                  <Spinner />
+                  <Text>{` Pushing version ${antFileVersion}...`}</Text>
+                </Box>)
+                : <Text>{liveAntFileVersion > 0 ? `Latest version on server: ${liveAntFileVersion}` : ''}</Text>}
+            </Box>
           </Box>
         </Box>
 
         {
           error
-            ? <Box><Color red>{`${error.status}: ${error.message}`}</Color></Box>
+            ? <Text color="red">{`${error.status}: ${error.message}`}</Text>
             : undefined
         }
 
