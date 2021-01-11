@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.6](https://github.com/jonpepler/ant-party-client/compare/v0.3.5...v0.3.6) (2021-01-11)
+
+
+### Features
+
+* 🎸 Request an ant spawn when the player presses 'a' ([169465e](https://github.com/jonpepler/ant-party-client/commit/169465ec82671e272484f668941942283ee56f68))
+
 ### [0.3.5](https://github.com/jonpepler/ant-party-client/compare/v0.3.4...v0.3.5) (2021-01-08)
 
 ### [0.3.4](https://github.com/jonpepler/ant-party-client/compare/v0.3.3...v0.3.4) (2021-01-08)
