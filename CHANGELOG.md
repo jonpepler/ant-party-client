@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.7](https://github.com/jonpepler/ant-party-client/compare/v0.3.6...v0.3.7) (2021-01-15)
+
+
+### Bug Fixes
+
+* 🐛 Use __dirname to get relative directory ([69aeccf](https://github.com/jonpepler/ant-party-client/commit/69aeccfd31f6825b1561fe60635a8fe0d19d4c0a))
+
 ### [0.3.6](https://github.com/jonpepler/ant-party-client/compare/v0.3.5...v0.3.6) (2021-01-11)
 
 
