@@ -19,6 +19,7 @@ class FileWatcher extends React.Component {
     this.state = {
       fileName,
       filePath: `${config.antDirectory}/${fileName}`,
+      baseFilePath: `${config.baseFilePath}/${fileName}`,
       versionDir: `${config.antDirectory}/.version`,
       antFileVersion: 0,
       diff: []
@@ -31,8 +32,7 @@ class FileWatcher extends React.Component {
 
   setupWatcher () {
     const { config } = this.props
-    const { fileName, filePath, versionDir } = this.state
-    const baseFilePath = `./${fileName}`
+    const { filePath, baseFilePath, versionDir } = this.state
     const antFileVersion = 0
 
     if (!fs.existsSync(config.antDirectory)) {
